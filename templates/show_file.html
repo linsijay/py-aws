@@ -1,0 +1,12 @@
+<!doctype html>
+<title>show file</title>
+<h2>file list</h2>
+{% for file in files.Contents %}
+  <li><a href="/download/{{ bucket_name }}/{{ file.Key }}">{{ file.Key }}</a> &nbsp;&nbsp; size:{{ file.Size }}KB</li>
+{% endfor %}
+<br/>
+<h2>add new file to S3</h2>
+<form action="" method=post enctype=multipart/form-data>
+  <input type=file name=file>
+  <input type=submit value=Upload>
+</form>

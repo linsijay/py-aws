@@ -1,0 +1,35 @@
+<!doctype html>
+<title>list all instance</title>
+<h2>list all instance</h2>
+<table width="60%" border="1px">
+<tr>
+  <th>Instance Id</th>
+  <th>State</th>
+  <th>Tag</th>
+  <th>Public IP</th>
+  <th>Private IP</th>
+  <th>Launch Time</th>
+</tr>
+{% for res in reservations %}
+  {% for instance in res.Instances %}
+    <tr>
+      <td>{{ instance.InstanceId }}</td>
+      <td>
+        {% if instance.State.Name == 'stopped' %}
+          <a href="/start/{{ instance.InstanceId }}">
+        {% elif instance.State.Name == 'running' %}
+          <a href="/stop/{{ instance.InstanceId }}">
+        {% else %}
+          <a href="#">
+        {% endif %}
+        {{ instance.State.Name }}</a>
+      </td>
+      <td>{% if instance.Tags %} {{ instance.Tags[0].Value }} {% endif %}</td>
+      <td>{{ instance.PublicIpAddress }}</td>
+      <td>{{ instance.PrivateIpAddress }}</td>
+      <td>{{ instance.LaunchTime }}</td>
+    </tr>
+  {% endfor %}
+{% endfor %}
+</table>
+

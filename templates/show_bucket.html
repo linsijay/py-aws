@@ -1,0 +1,6 @@
+<!doctype html>
+<title>select your bucket</title>
+<h2>select a bucket</h2>
+{% for bucket in buckets.Buckets %}
+  <li><a href="/bucket/{{ bucket.Name }}">{{ bucket.Name }}</a></li>
+{% endfor %}

@@ -1,0 +1,10 @@
+#for AWS using
+AWS_ACCESS_ID = ''
+AWS_ACCESS_KEY = ''
+AWS_ACCESS_REGION = ''
+
+#for flask using
+SITE_ADDRESS = '0.0.0.0'
+SITE_PORT = 80
+SITE_DEBUG = True
+SITE_UPLOAD_TMP_FOLDER = '/tmp'
