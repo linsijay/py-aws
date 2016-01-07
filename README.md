@@ -27,10 +27,10 @@ if required, change the site information for Flask
 #python3 py-s3.py
 test this with http://SITE_ADDRESS:SITE_PORT
 ```
-![alt tag](https://raw.github.com/linsijay/py-aws/blob/master/s3_screenshot.jpg)
+![alt tag](https://raw.githubusercontent.com/linsijay/py-aws/master/s3_screenshot.jpg)
 - run EC2 application
 ```
 #python3 py-ec2.py
 test this with http://SITE_ADDRESS:SITE_PORT
 ```
-![alt tag](https://raw.github.com/linsijay/py-aws/blob/master/ec2_screenshot.jpg)
+![alt tag](https://raw.githubusercontent.com/linsijay/py-aws/master/ec2_screenshot.jpg)
